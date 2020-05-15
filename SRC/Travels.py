@@ -12,6 +12,7 @@ class Travels:
         self.price = 0
 
     def manage(self):
+        pass
 
 
 
