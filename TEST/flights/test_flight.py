@@ -19,17 +19,17 @@ class TestFlights(unittest.TestCase):
     def test_vacio(self):
         self.Flights = Flights()
         if (self.Flights.destination != ""):
-            print "Error en la creación de los destinos\n"
+            print ("Error en la creación de los destinos\n")
             quit()
-        print "El destino es correcto // OK \n"
+        print ("El destino es correcto // OK \n")
         if (self.Flights.flight_code != ""):
-            print "Error en la creación del código de vuelo\n"
+            print ("Error en la creación del código de vuelo\n")
             quit()
-        print "El código de vuelo es correcto // OK \n"
+        print ("El código de vuelo es correcto // OK \n")
         if (self.Flights.n_passengers != 0):
-            print "Error en la creación del número de pasajeros\n"
+            print ("Error en la creación del número de pasajeros\n")
             quit()
-        print "El número de pasajeros es correcto // OK \n"
+        print ("El número de pasajeros es correcto // OK \n")
         return 1
 
     def Test_1(self):
@@ -39,21 +39,27 @@ class TestFlights(unittest.TestCase):
         self.Flights.n_passengers = 54
 
         if (self.Flights.destination != "Paris"):
-            print
-            "Error en la creación de los destinos\n"
+            print ("Error en la creación de los destinos\n")
             quit()
-        print
-        "El destino es correcto // OK \n"
+        print ("El destino es correcto // OK \n")
         if (self.Flights.flight_code != "random_code"):
-            print
-            "Error en la creación del código de vuelo\n"
+            print ("Error en la creación del código de vuelo\n")
             quit()
-        print
-        "El código de vuelo es correcto // OK \n"
+        print ("El código de vuelo es correcto // OK \n")
         if (self.Flights.n_passengers != 54):
-            print
-            "Error en la creación del número de pasajeros\n"
+            print("Error en la creación del número de pasajeros\n")
             quit()
-        print
-        "El número de pasajeros es correcto // OK \n"
+        print("El número de pasajeros es correcto // OK \n")
         return 1
+
+    def Test_passengers(self):
+        self.Flights = Flights()
+        assert self.Flights.n_passengers == 0
+        assert self.Flights.get_nPassengers() == 0
+        self.Flights.n_passengers == 1
+        assert self.Flights.n_passengers == 1
+        assert self.Flights.get_nPassengers() == 1
+        self.Flights.set_nPassengers(15)
+        assert self.Flights.n_passengers == 15
+        assert self.Flights.get_nPassengers() == 15
+

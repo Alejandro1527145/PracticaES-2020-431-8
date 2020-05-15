@@ -11,5 +11,11 @@ class Flights:
         self.destination = ""
         self.n_passengers = 0
 
+    def set_nPassengers(self, num: int):
+        self.n_passengers = num
+
+    def get_nPassengers(self):
+        return self.n_passengers
+
 
 
