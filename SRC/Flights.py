@@ -5,9 +5,11 @@ class Flights:
     - Número de passatgers
 
    """
-    def __init__(self, codi_vol, destinacio, n_passatgers):
-        self.codi_vol = ""
-        self.destinacio = ""
-        self.n_passatgers = ""
+    def __init__(self):
+
+        self.flight_code = ""
+        self.destination = ""
+        self.n_passengers = 0
+
 
 
