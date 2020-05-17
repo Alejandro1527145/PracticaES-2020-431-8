@@ -24,12 +24,12 @@ class TestPrecio(unittest.TestCase):
         hotel1 = Hotels('a', 2, 2, 1, 1999, 10)
         hotel2 = Hotels('b', 3, 2, 1, 2000, 20)
 
-        coche1 = Cars(1999, 'Ford Fiesta', 'aeroport', 2, 10)
-        coche2 = Cars(2000, 'Honda Cívic', 'aeroport', 2, 20)
+        cotxe1 = Cars(1999, 'Ford Fiesta', 'aeroport', 2, 10)
+        cotxe2 = Cars(2000, 'Honda Cívic', 'aeroport', 2, 20)
 
         llistaV = [vol1, vol2]
         llistaH = [hotel1, hotel2]
-        llistaC = [coche1, coche2]
+        llistaC = [cotxe1, cotxe2]
 
         Travels = Travels(llistaV, llistaH, llistaC, 0, 2, 'Barcelona', '23-06-2020', '01-07-2020')
         Travels.calcularPrecio()
