@@ -23,4 +23,6 @@ class Rentalcars():
         pass
 
     def confirm_reserve(self, user: User, cars: Cars) -> bool:
+            if user.reserva == []:
+                print "No existen reservas que confirmar\n"
         return True
