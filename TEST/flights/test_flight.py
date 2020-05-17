@@ -32,7 +32,7 @@ class TestFlights(unittest.TestCase):
         print ("El número de pasajeros es correcto // OK \n")
         return 1
 
-    def Test_1(self):
+    def test_1(self):
         self.Flights = Flights()
         self.Flights.destination = "Paris"
         self.Flights.flight_code = "random_code"
@@ -52,11 +52,11 @@ class TestFlights(unittest.TestCase):
         print("El número de pasajeros es correcto // OK \n")
         return 1
 
-    def Test_passengers(self):
+    def test_passengers(self):
         self.Flights = Flights()
         assert self.Flights.n_passengers == 0
         assert self.Flights.get_nPassengers() == 0
-        self.Flights.n_passengers == 1
+        self.Flights.n_passengers = 1
         assert self.Flights.n_passengers == 1
         assert self.Flights.get_nPassengers() == 1
         self.Flights.set_nPassengers(15)

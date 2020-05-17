@@ -14,6 +14,7 @@ class Travels:
         self.dateF = dateF
         self.price = price
 
+
     def calcularPrecio(self):
         for hotel in self.hotels:
             self.price = self.price + hotel.price
