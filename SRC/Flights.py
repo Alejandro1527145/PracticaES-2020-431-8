@@ -11,6 +11,13 @@ class Flights:
         self.destination = ""
         self.n_passengers = 0
 
+    def __init__(self, flight_code, destination, n_passengers, price):
+
+        self.flight_code = flight_code
+        self.destination = destination
+        self.n_passengers = n_passengers
+        self.price = price
+
     def set_nPassengers(self, num: int):
         self.n_passengers = num
 
