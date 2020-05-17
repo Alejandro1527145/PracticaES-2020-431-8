@@ -33,7 +33,7 @@ class Skyscanner():
                 user.reserva.flights.flight_code = flights.flight_code
                 user.reserva.flights.n_passengers = flights.n_passengers
                 user.reserva.flights.destination = flights.destination
-                print("Confirmación de la reserva: OK")
+                print"Confirmación de la reserva: OK"
             else:
                 print("No se ha realizado la confirmación de la reserva")
 
