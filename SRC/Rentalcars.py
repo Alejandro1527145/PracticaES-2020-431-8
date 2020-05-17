@@ -23,4 +23,5 @@ class Rentalcars():
         pass
 
     def confirm_reserve(self, user: User, cars: Cars) -> bool:
+
         return True
