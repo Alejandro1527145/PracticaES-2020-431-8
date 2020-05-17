@@ -10,7 +10,7 @@ from SRC.User import User
 
 class TestPrecio(unittest.TestCase):
 
-    def test_sin_des(self):
+    def test_sin_destino(self):
 
         Travels = Travels([0],[0],[0], 0, 2, 'Terrassa', '23-06-2020', '01-07-2020')
         Travels.calcularPrecio()
