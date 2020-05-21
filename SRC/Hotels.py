@@ -10,3 +10,6 @@ class Hotels:
         self.habitaciones = habitaciones
         self.dias = dias
         self.precio = precio
+
+    def getPrecio(self):
+        return self.precio

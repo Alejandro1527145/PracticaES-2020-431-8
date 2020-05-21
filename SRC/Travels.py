@@ -5,12 +5,12 @@ from . import Cars
 
 class Travels:
 
-    def __init__(self, price, pasaj, orig, dateI, dateF):
+    def __init__(self, preciovuelo, preciohotel, preciocoche, price, pasaj, orig, dateI, dateF):
         self.pasaj = pasaj
         self.orig = orig
-        self.flights = Flights()
-        self.hotels = Hotels()
-        self.cars = Cars()
+        self.flights = Flights("", "", 0, preciovuelo)
+        self.hotels = Hotels("", 0, 0, 0, 0, preciohotel)
+        self.cars = Cars(0, "", "", 0, preciocoche)
         self.dateI = dateI
         self.dateF = dateF
         self.price = price
@@ -18,11 +18,11 @@ class Travels:
 
     def calcularPrecio(self):
         for hotel in self.hotels:
-            self.price = self.price + hotels.price
+            self.price += self.hotels.getPrecio()
         for flight in self.flights:
-            self.price = self.price + self.flights.price
+            self.price += self.flights.getPrecio()
         for car in self.cars:
-            self.price = self.price + car.price
+            self.price += self.cars.getPrecio()
 
     def manage(self):
         pass

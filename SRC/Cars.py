@@ -9,3 +9,6 @@ class Cars:
         self.llocRecogida = llocRecogida
         self.dies = dies
         self.preu = preu
+
+    def getPrecio(self):
+        return self.preu

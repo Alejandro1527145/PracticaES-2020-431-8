@@ -25,5 +25,8 @@ class Flights:
     def get_nPassengers(self):
         return self.n_passengers
 
+    def getPrecio(self):
+        return self.price
+
 
 
