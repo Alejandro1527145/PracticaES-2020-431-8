@@ -18,6 +18,10 @@ class Flights:
         self.destination = destination
         self.n_passengers = n_passengers
         self.price = price
+        self.llista_d = []
+        self.llista_d.append(self.destination)
+        self.llista_f = []
+        self.llista_f.append(self.flight_code)
 
     def set_nPassengers(self, num: int):
         self.n_passengers = num
@@ -29,7 +33,13 @@ class Flights:
         return self.price
 
     def afegirDestins(self, desti):
-        self.destination.append(desti)
+        self.llista_d.append(desti)
+        return self.llista_d
+
+    def afegirVols(self, codivol):
+        self.llista_f.append(codivol)
+        return self.llista_f
+
 
 
 
