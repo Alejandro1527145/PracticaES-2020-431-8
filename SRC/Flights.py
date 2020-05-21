@@ -40,6 +40,15 @@ class Flights:
         self.llista_f.append(codivol)
         return self.llista_f
 
+    def treureDestins(self, desti):
+        self.llista_d.remove(desti)
+        return self.llista_d
+
+    def treureVols(self, vol):
+        self.llista_f.remove(vol)
+        return self.llista_f
+
+
 
 
 
