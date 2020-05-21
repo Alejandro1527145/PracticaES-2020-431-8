@@ -17,7 +17,7 @@ class Travels:
 
     def calcularPrecio(self):
         for hotel in self.hotels:
-            self.price = self.price + hotel.price
+            self.price = self.price + hotels.price
         for flight in self.flights:
             self.price = self.price + flight.price
         for car in self.cars:

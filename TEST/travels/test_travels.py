@@ -1,6 +1,5 @@
 import unittest
 from unittest import mock
-import pytest
 from SRC.Cars import Cars
 from SRC.Flights import Flights
 from SRC.Hotels import Hotels
@@ -12,8 +11,9 @@ class TestPrecio(unittest.TestCase):
 
     def test_sin_destino(self):
 
-        Travels = Travels([0],[0],[0], 0, 2, 'Terrassa', '23-06-2020', '01-07-2020')
-        Travels.calcularPrecio()
+        self.Travels = Travels([0],[0],[0], 0, 2, 'Terrassa', '23-06-2020', '01-07-2020')
+        self.Travels.calcularPrecio()
+        print (self.Travels.price)
         assert Travels.price == 0
 
     def test_calc_precio(self):
@@ -31,8 +31,8 @@ class TestPrecio(unittest.TestCase):
         llistaH = [hotel1, hotel2]
         llistaC = [cotxe1, cotxe2]
 
-        Travels = Travels(llistaV, llistaH, llistaC, 0, 2, 'Barcelona', '23-06-2020', '01-07-2020')
-        Travels.calcularPrecio()
+        self.Travels = Travels(llistaV, llistaH, llistaC, 0, 2, 'Barcelona', '23-06-2020', '01-07-2020')
+        self.Travels.calcularPrecio()
         preufinal = 30
         assert Travels.price == preufinal
 

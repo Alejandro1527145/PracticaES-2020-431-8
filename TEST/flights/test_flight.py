@@ -17,7 +17,7 @@ from SRC.Flights import Flights
 class TestFlights(unittest.TestCase):
 
     def test_vacio(self):
-        self.Flights = Flights()
+        self.Flights = Flights(0,"",0,0)
         if (self.Flights.destination != ""):
             print ("Error en la creación de los destinos\n")
             quit()
@@ -33,7 +33,7 @@ class TestFlights(unittest.TestCase):
         return 1
 
     def test_1(self):
-        self.Flights = Flights()
+        self.Flights = Flights(0,"",0,0)
         self.Flights.destination = "Paris"
         self.Flights.flight_code = "random_code"
         self.Flights.n_passengers = 54
@@ -53,7 +53,7 @@ class TestFlights(unittest.TestCase):
         return 1
 
     def test_passengers(self):
-        self.Flights = Flights()
+        self.Flights = Flights(0,"",0,0)
         assert self.Flights.n_passengers == 0
         assert self.Flights.get_nPassengers() == 0
         self.Flights.n_passengers = 1
