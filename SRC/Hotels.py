@@ -13,3 +13,4 @@ class Hotels:
 
     def getPrecio(self):
         return self.precio
+

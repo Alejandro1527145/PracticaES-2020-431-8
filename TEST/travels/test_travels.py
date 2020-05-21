@@ -10,11 +10,12 @@ from SRC.User import User
 class TestPrecio(unittest.TestCase):
 
     def test_sin_destino(self):
-
-        self.Travels = Travels([0],[0],[0], 0, 2, 'Terrassa', '23-06-2020', '01-07-2020')
+        self.Vuelo = Flights(0, "", 0, 5)
+        self.Hotel = Hotels("", 0, 0, 0, 0, 5)
+        self.Car = Cars(0, "", "", 0, 5)
+        self.Travels = Travels(self.Vuelo, self.Hotel, self.Car, "", "", "")
         self.Travels.calcularPrecio()
-        print (self.Travels.price)
-        assert Travels.price == 0
+        assert self.Travels.price == 0
 
     def test_calc_precio(self):
 

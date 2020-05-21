@@ -22,7 +22,7 @@ class TestFlights(unittest.TestCase):
             print ("Error en la creación de los destinos\n")
             quit()
         print ("El destino es correcto // OK \n")
-        if (self.Flights.flight_code != ""):
+        if (self.Flights.flight_code != 0):
             print ("Error en la creación del código de vuelo\n")
             quit()
         print ("El código de vuelo es correcto // OK \n")
@@ -35,14 +35,14 @@ class TestFlights(unittest.TestCase):
     def test_1(self):
         self.Flights = Flights(0,"",0,0)
         self.Flights.destination = "Paris"
-        self.Flights.flight_code = "random_code"
+        self.Flights.flight_code = 1234
         self.Flights.n_passengers = 54
 
         if (self.Flights.destination != "Paris"):
             print ("Error en la creación de los destinos\n")
             quit()
         print ("El destino es correcto // OK \n")
-        if (self.Flights.flight_code != "random_code"):
+        if (self.Flights.flight_code != 1234):
             print ("Error en la creación del código de vuelo\n")
             quit()
         print ("El código de vuelo es correcto // OK \n")

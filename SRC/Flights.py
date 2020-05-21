@@ -8,7 +8,7 @@ class Flights:
     def __init__(self):
 
         self.flight_code = 0
-        self.destination = ""
+        self.destination = []
         self.n_passengers = 0
         self.price = 0
 
