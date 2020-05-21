@@ -19,7 +19,7 @@ from SRC.Bank import Bank
 class TestPayment(unittest.TestCase):
 
     def test_tipus(self):
-        self.Payment = PaymentData("","",0,0,0)
+        self.Payment = PaymentData("",0,0,0)
         assert self.Payment.type == ""
         assert not self.Payment.type == "VISA"
         self.Payment.type = "VISA"
@@ -30,11 +30,11 @@ class TestPayment(unittest.TestCase):
         assert self.Payment.type == "MasterCard"
         self.Payment.setType(123)
         assert not self.Payment.type == 123
-        self.Payment = PaymentData("VISA","",0,0,0)
-        assert self.Payment.type == "VISA"
+        self.Payment = PaymentData("",0,0,0)
+        assert not self.Payment.type == "VISA"
 
     def test_pagament(self):
-        self.Payment = PaymentData("","",0,0,0)
+        self.Payment = PaymentData("",0,0,0)
         self.User = User("", "", 0, "", self.Payment)
         self.Bank = Bank()
         assert self.Bank.do_payment(self.User,self.Payment) == True
