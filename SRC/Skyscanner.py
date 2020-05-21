@@ -25,15 +25,16 @@ class Skyscanner():
         if user.reserva == []:
             print("No existen reservas que confirmar\n")
         else:
-            print("¿Quiere confirmar la reserva para el vuelo con código de vuelo :\n",flights.flight_code)
-            print("Confirma: si/no\n"")
+            print("¿Quiere confirmar la reserva para el vuelo con código de vuelo :\n")
+            print(flights.flight_code)
+            print("Confirma: si/no\n")
             confirma = input()
             if(confirma == 'si'):
                 # COMPROBAR QUE FLIGHTS NO ESTÉ VACÍO
                 user.reserva.flights.flight_code = flights.flight_code
                 user.reserva.flights.n_passengers = flights.n_passengers
                 user.reserva.flights.destination = flights.destination
-                print"Confirmación de la reserva: OK"
+                print("Confirmación de la reserva: OK")
             else:
                 print("No se ha realizado la confirmación de la reserva")
 
