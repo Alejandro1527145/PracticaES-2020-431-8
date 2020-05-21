@@ -18,7 +18,7 @@ class Travels:
         if self.flights.destination == "":
             self.price = 0
         else:
-            self.price = self.hotels.getPrecio() + self.cars.getPrecio() + self.cars.getPrecio()
+            self.price = self.hotels.getPrecio() + self.cars.getPrecio() + self.flights.getPrecio()
         return self.price
 
     def manage(self):

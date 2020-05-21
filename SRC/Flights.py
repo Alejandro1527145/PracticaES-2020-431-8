@@ -28,5 +28,8 @@ class Flights:
     def getPrecio(self):
         return self.price
 
+    def afegirDestins(self, desti):
+        self.destination.append(desti)
+
 
 
