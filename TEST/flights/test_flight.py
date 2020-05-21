@@ -63,3 +63,5 @@ class TestFlights(unittest.TestCase):
         assert self.Flights.n_passengers == 15
         assert self.Flights.get_nPassengers() == 15
 
+
+

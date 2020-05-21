@@ -14,3 +14,6 @@ class Hotels:
     def getPrecio(self):
         return self.precio
 
+    def getPersones(self):
+        return self.pers
+
