@@ -1,8 +1,5 @@
 class Hotels:
 
-    def __init__(self):
-        pass
-
     def __init__(self, nombre, dias, pers, habitaciones, id, precio):
         self.id = id
         self.nombre = nombre
@@ -16,4 +13,14 @@ class Hotels:
 
     def getPersones(self):
         return self.pers
+
+    def getDias(self):
+        return self.dias
+
+    def getHabitaciones(self):
+        return self.habitaciones
+
+    def getNombre(self):
+        return self.nombre
+
 
