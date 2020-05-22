@@ -24,5 +24,3 @@ class Travels:
     def manage(self):
         pass
 
-
-
