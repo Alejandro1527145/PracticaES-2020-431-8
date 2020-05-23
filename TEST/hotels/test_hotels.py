@@ -221,3 +221,27 @@ class TestHotels(unittest.TestCase):
         self.Hotels.precio = 400
         self.Hotels.modificarPrecio(400)
         assert self.Hotels.precio == 400
+
+    def test_confirm_Hotel(self):
+        self.hotel1 = Hotels("OverLook", 2, 1, 1, "12-H", 400)
+        confirm = 0
+        if self.hotel1.getDias() == 2 and self.hotel1.getId() == '12-H' and self.hotel1.getPrecio() == 400 and self.hotel1.getPersones() == 1 and self.hotel1.getNombre() == "OverLook" and self.hotel1.getHabitaciones() == 1:
+            print('Confirmación Correcta')
+            confirm = 1
+        elif self.hotel1.getDias() == 0:
+            print('No se ha podido confirmar la reserva del hotel debido a que no está indicado el número de dias de las reservas.')
+        elif self.hotel1.getId() == "":
+            print('No se ha podido confirmar la reserva del hotel debido a que no está indicado el número de ID de la reserva.')
+        elif self.hotel1.getPrecio() == 0:
+            print('No se ha podido confirmar la reserva del hotel debido a que no está indicado el precio del Hotel.')
+        elif self.hotel1.getPersones() == 0:
+            print('No se ha podido confirmar la reserva del hotel debido a que no está indicado el número de personas.')
+        elif self.hotel1.getNombre() == "":
+            print('No se ha podido confirmar la reserva del hotel debido a que no está indicado el nombre del hotel.')
+        elif self.hotel1.getHabitaciones() == 0:
+            print('No se ha podido confirmar la reserva del hotel debido a que no está indicado el número de las habitaciones.')
+        if confirm != 0:
+            return True
+        else:
+            print("Confirmación errónea")
+            return False
