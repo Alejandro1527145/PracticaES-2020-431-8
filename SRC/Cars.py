@@ -3,6 +3,7 @@ class Cars:
     def __init__(self):
         pass
 
+
     def __init__(self, codi, marca, llocRecogida, dies, preu):
         self.codi = codi
         self.marca = marca
@@ -20,13 +21,12 @@ class Cars:
         self.llista_p = []
         self.llista_p.append(self.preu)
 
-
     def getPrecio(self):
         precio = 0
         for i in self.llista_p:
             precio += i
         return precio
-    
+
     def afegirCotxe(self, codi, marca, llocRecogida, dies, preu):
         self.llista_c.append(codi)
         self.llista_m.append(marca)
