@@ -63,5 +63,46 @@ class TestFlights(unittest.TestCase):
         assert self.Flights.n_passengers == 15
         assert self.Flights.get_nPassengers() == 15
 
+    def test_moreDestination(self):
+        self.Flights = Flights(0, "", 0, 0)
+        assert self.Flights.destination == ""
+        self.Flights = Flights(0, "Madrid", 0, 0)
+        assert self.Flights.destination == "Madrid"
+        self.Flights.afegirDestins("Almeria")
+        assert self.Flights.llista_d == ["Madrid", "Almeria"]
+        self.Flights.afegirDestins("Mallorca")
+        assert self.Flights.llista_d == ["Madrid", "Almeria", "Mallorca"]
+
+    def test_moreFlights(self):
+        self.Flights = Flights(0, "", 0, 0)
+        assert self.Flights.flight_code == 0
+        self.Flights = Flights(123, "Madrid", 0, 0)
+        assert self.Flights.flight_code == 123
+        self.Flights.afegirVols(145)
+        assert self.Flights.llista_f == [123, 145]
+        self.Flights.afegirVols(888)
+        assert self.Flights.llista_f == [123, 145, 888]
+
+    def test_removeDestination(self):
+        self.Flights = Flights(0, "Madrid", 0, 0)
+        self.Flights.afegirDestins("Almeria")
+        assert self.Flights.llista_d == ["Madrid", "Almeria"]
+        self.Flights.treureDestins("Madrid")
+        assert self.Flights.llista_d == ["Almeria"]
+        self.Flights = Flights(0, "Madrid", 0, 0)
+        self.Flights.afegirDestins("Almeria")
+        self.Flights.afegirDestins("Mallorca")
+        assert self.Flights.llista_d == ["Madrid", "Almeria", "Mallorca"]
+        self.Flights.treureDestins("Madrid")
+        assert self.Flights.llista_d == ["Almeria", "Mallorca"]
+
+    def test_removeFlights(self):
+        self.Flights = Flights(123, "Madrid", 0, 0)
+        self.Flights.afegirVols(145)
+        assert self.Flights.llista_f == [123, 145]
+        self.Flights.treureVols(123)
+        assert self.Flights.llista_f == [145]
+
+
 
 
