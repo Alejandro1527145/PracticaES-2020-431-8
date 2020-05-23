@@ -35,10 +35,6 @@ class Cars:
     def getDies(self):
         return self.dies
 
-
-
-
-
     def afegirCotxe(self, codi, marca, llocRecogida, dies, preu):
         self.llista_c.append(codi)
         self.llista_m.append(marca)
