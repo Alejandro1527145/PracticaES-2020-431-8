@@ -34,7 +34,7 @@ class Hotels:
     def getId(self):
         return self.id
 
-    def modificarDies(self, dias, precio):
+    def modificarDias(self, dias, precio):
         self.dias = dias
         self.precio = precio
 

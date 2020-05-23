@@ -154,6 +154,12 @@ class TestHotels(unittest.TestCase):
         assert self.Hotels.habitaciones == 4
         assert self.Hotels.getHabitaciones() == 4
 
+        # Modificación
+        self.Hotels.habitaciones = 4
+        self.Hotels.modificarHabitaciones(6,400)
+        assert self.Hotels.habitaciones == 6
+        assert self.Hotels.precio == 400
+
     def test_Pers(self):
         # Inicialización desde constructor "Vacío"
         self.Hotels = Hotels("", 0, 0, 0, "", 0)
@@ -168,6 +174,12 @@ class TestHotels(unittest.TestCase):
         self.Hotels.pers = 4
         assert self.Hotels.pers == 4
         assert self.Hotels.getPersones() == 4
+
+        # Modificación
+        self.Hotels.pers = 4
+        self.Hotels.modificarPersonas(6, 400)
+        assert self.Hotels.pers == 6
+        assert self.Hotels.precio == 400
 
     def test_Dias(self):
         # Inicialización desde constructor "Vacío"
@@ -184,6 +196,12 @@ class TestHotels(unittest.TestCase):
         assert self.Hotels.dias == 4
         assert self.Hotels.getDias() == 4
 
+        # Modificación
+        self.Hotels.dias = 4
+        self.Hotels.modificarDias(6, 400)
+        assert self.Hotels.dias == 6
+        assert self.Hotels.precio == 400
+
     def test_Precio(self):
         # Inicialización desde constructor "Vacío"
         self.Hotels = Hotels("", 0, 0, 0, "", 0)
@@ -198,3 +216,8 @@ class TestHotels(unittest.TestCase):
         self.Hotels.precio = 400
         assert self.Hotels.precio == 400
         assert self.Hotels.getPrecio() == 400
+
+        # Modificación
+        self.Hotels.precio = 400
+        self.Hotels.modificarPrecio(400)
+        assert self.Hotels.precio == 400
