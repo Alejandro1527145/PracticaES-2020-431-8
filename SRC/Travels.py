@@ -1,6 +1,5 @@
 from . import Flights
 from . import Hotels
-from . import User
 from . import Cars
 
 class Travels:
@@ -13,7 +12,8 @@ class Travels:
         self.dateI = dateI
         self.dateF = dateF
 
-
+    def getPrecio(self):
+        return self.price
     def calcularPrecio(self):
         if self.flights.destination == "":
             self.price = 0
