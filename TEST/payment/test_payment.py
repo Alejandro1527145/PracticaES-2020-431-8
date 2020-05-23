@@ -1,6 +1,3 @@
-import os
-import sys
-import tempfile
 import unittest
 
 # TO BE ABLE TO DEBUG THE TEST 2 WAYS:
@@ -15,6 +12,10 @@ import unittest
 from SRC.PaymentData import PaymentData
 from SRC.User import User
 from SRC.Bank import Bank
+from SRC.Flights import Flights
+from SRC.Hotels import Hotels
+from SRC.Travels import Travels
+from SRC.Cars import Cars
 
 class TestPayment(unittest.TestCase):
 
@@ -38,6 +39,27 @@ class TestPayment(unittest.TestCase):
         self.User = User("", "", 0, "", self.Payment)
         self.Bank = Bank()
         assert self.Bank.do_payment(self.User,self.Payment) == True
+
+    def test_mensaje_error(self):
+        self.bank = Bank()
+        self.Payment = PaymentData()
+
+        self.vol1 = Flights(1999, "Madrid", 1, 10)
+        self.hotel1 = Hotels("a", 2, 1, 1, 1999, 10)
+        self.cotxe1 = Cars(1999, "Ford Fiesta", "aeroport", 2, 10)
+        self.Travels = Travels(self.vol1, self.hotel1, self.cotxe1, "Barcelona", "23-06-2020", "01-07-2020")
+        self.Travels.calcularPrecio()
+        assert self.Travels.price == 30
+
+        self.Payment.preu = self.Travels.getPrecio()
+
+        self.payment_data = PaymentData('Jon Coello', '12345678900', '1234', 10)
+
+        if self.bank.do_payment(self, self.payment_data):
+            return True
+        else:
+            print('Error: No se ha podido realizar el pago correctamente.')
+            return False
 
 
 
