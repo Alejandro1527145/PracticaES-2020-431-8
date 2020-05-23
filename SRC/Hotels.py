@@ -1,7 +1,15 @@
 class Hotels:
 
-    def __init__(self, nombre, dias, pers, habitaciones, id, precio):
+    def __init__(self, nombre: str, dias: int, pers: int, habitaciones: int, id: str, precio: int):
+        while type(id) != str:
+           print("El ID de la reserva debe de ser una cadena de carácteres.\n")
+           print("Vuelva a introducirlo de nuevo:\n")
+           id = input()
         self.id = id
+        while type(nombre) != str:
+           print("El nombre del hotel debe de ser una cadena de carácteres.\n")
+           print("Vuelva a introducirlo de nuevo:\n")
+           nombre = input()
         self.nombre = nombre
         self.pers = pers
         self.habitaciones = habitaciones
@@ -23,21 +31,20 @@ class Hotels:
     def getNombre(self):
         return self.nombre
 
-    def modificarRHotel(self, dias = self.dias, pers = self.pers, habitaciones = self.habitaciones):
-        print("¿Que desea cambiar sobre su reserva?")
-        print(" 1: DIAS \n 2: NÚMERO DE HOSTS \n 3: HABITACIÓN")
+    def getId(self):
+        return self.id
 
-        case = input()
-        while((case < 0 ) || (case > 3))
-            print("Error: Vuelva a introducir los datos...")
-            case = input()
-        if case == 1:
-            print("Introduzca el número de dias que desea estar")
-            correcto == False
-            while(correcto == False)
-            dias = input()
-            if(dias <= 0):
-                print("El número de días debe de ser almenos 1")
+    def modificarDies(self, dias, precio):
+        self.dias = dias
+        self.precio = precio
 
+    def modificarHabitaciones(self, habitaciones, precio):
+        self.habitaciones = habitaciones
+        self.precio = precio
 
+    def modificarPersonas(self, pers, precio):
+        self.pers = pers
+        self.precio = precio
 
+    def modificarPrecio(self, precio):
+        self.precio = precio
