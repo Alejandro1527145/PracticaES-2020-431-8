@@ -20,6 +20,8 @@ class PaymentData:
         if (tipo == "VISA" or tipo == "MasterCard"):
             self.type = tipo
 
+    def getPrecio(self):
+        return self.preu
 
 
 
