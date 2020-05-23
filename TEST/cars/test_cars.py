@@ -13,6 +13,10 @@ import unittest
     #   sys.path.insert(0, PROJECT_DIR)
 
 from SRC.Cars import Cars
+from SRC.Hotels import Hotels
+from SRC.Flights import Flights
+from SRC.Travels import Travels
+
 
 class TestCars(unittest.TestCase):
 
@@ -27,4 +31,29 @@ class TestCars(unittest.TestCase):
         assert self.Car.getPrecio() == 10
         self.Car.afegirCotxe(321, "Audi", "BCN", 12, 5)
         assert self.Car.getPrecio() == 15
+
+    def test_confirm_car(self):
+        self.vol1 = Flights(1999, "Madrid", 1, 0)
+        self.hotel1 = Hotels("a", 2, 1, 1, 1999, 0)
+        self.cotxe1 = Cars(1999, "Ford Fiesta", "aeroport", 2, 0)
+        self.Travels = Travels(self.vol1, self.hotel1, self.cotxe1, "Barcelona", "23-06-2020", "01-07-2020")
+
+        confirm = 0
+            if self.cotxe1.getCodi() != 0 and self.cotxe1.getMarca() != 'None' and self.cotxe1.getRecollida() != 0 and self.cotxe1.getDies() != 0 and self.cotxe1.getPrecio() != 0:
+                print('Confirmación Correcta')
+                confirm = 1
+            elif self.cotxe1.getCodi() == 0:
+                print('No se ha podido confirmar la reserva del coche debido al código. ')
+            elif self.cotxe1.getMarca() == 0:
+                print('No se ha podido confirmar la reserva del coche debido a que no esta indicada la marca del coche.')
+            elif self.cotxe1.getRecollida() == 0:
+                print('No se ha podido confirmar la reserva del coche debido a que no estan indicadas las plazas del coche.')
+            elif self.cotxe1.getDies() == 0:
+                print('No se ha podido confirmar la reserva del coche debido a que no esta indicados los dias de alquiler del coche.')
+            elif self.cotxe1.getPrecio() == 0:
+                print('No se ha podido confirmar la reserva del coche debido a que no esta indicado el precio del coche.')
+            if confirm !=0:
+                return True
+            else:
+                return False
 
