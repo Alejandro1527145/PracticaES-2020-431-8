@@ -1,13 +1,9 @@
 class Cars:
 
-    def __init__(self):
-        pass
-
-
     def __init__(self, codi, marca, llocRecogida, dies, preu):
         self.codi = codi
         self.marca = marca
-        self.llocRecogida = llocRecogida
+        self.llocRecollida = llocRecogida
         self.dies = dies
         self.preu = preu
         self.llista_c = []
@@ -15,7 +11,7 @@ class Cars:
         self.llista_m = []
         self.llista_m.append(self.marca)
         self.llista_r = []
-        self.llista_r.append(self.llocRecogida)
+        self.llista_r.append(self.llocRecollida)
         self.llista_d = []
         self.llista_d.append(self.dies)
         self.llista_p = []
