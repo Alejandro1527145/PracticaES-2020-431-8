@@ -1,15 +1,7 @@
 class Hotels:
 
     def __init__(self, nombre: str, dias: int, pers: int, habitaciones: int, id: str, precio: int):
-        while type(id) != str:
-           print("El ID de la reserva debe de ser una cadena de carácteres.\n")
-           print("Vuelva a introducirlo de nuevo:\n")
-           id = input()
         self.id = id
-        while type(nombre) != str:
-           print("El nombre del hotel debe de ser una cadena de carácteres.\n")
-           print("Vuelva a introducirlo de nuevo:\n")
-           nombre = input()
         self.nombre = nombre
         self.pers = pers
         self.habitaciones = habitaciones

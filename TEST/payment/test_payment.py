@@ -42,12 +42,13 @@ class TestPayment(unittest.TestCase):
 
     def test_mensaje_error(self):
         self.bank = Bank()
-        self.Payment = PaymentData()
+        self.Payment = PaymentData("","","",0)
+        self.Usuari = User("","","","","")
 
         self.vol1 = Flights(1999, "Madrid", 1, 10)
         self.hotel1 = Hotels("a", 2, 1, 1, 1999, 10)
         self.cotxe1 = Cars(1999, "Ford Fiesta", "aeroport", 2, 10)
-        self.Travels = Travels(self.vol1, self.hotel1, self.cotxe1, "Barcelona", "23-06-2020", "01-07-2020")
+        self.Travels = Travels(self.Usuari, self.vol1, self.hotel1, self.cotxe1, "Barcelona", "23-06-2020", "01-07-2020")
         self.Travels.calcularPrecio()
         assert self.Travels.price == 30
 

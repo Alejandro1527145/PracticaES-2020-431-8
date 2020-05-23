@@ -11,7 +11,7 @@ class User:
         self.telf = telf
         self.email = email
         self.payment_data = payment_data
-        self.reserva = Travels()
+        #self.reserva = Travels()
 
     def getName(self) -> str:
         return self.name

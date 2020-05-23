@@ -110,8 +110,8 @@ class TestHotels(unittest.TestCase):
 
         # Inicialización desde constructor "mal"
         self.Hotels = Hotels(1, 0,0,0,"",0)
-        assert self.Hotels.nombre == "Hotel"
-        assert self.Hotels.getNombre() == "Hotel"
+        assert not self.Hotels.nombre == "Hotel"
+        assert not self.Hotels.getNombre() == "Hotel"
 
         # Inicialización desde igualación
 
@@ -131,8 +131,8 @@ class TestHotels(unittest.TestCase):
 
         # Inicialización desde constructor "mal"
         self.Hotels = Hotels("", 0,0,0,1,0)
-        assert self.Hotels.id == "12-H"
-        assert self.Hotels.getId() == "12-H"
+        assert not self.Hotels.id == "12-H"
+        assert not self.Hotels.getId() == "12-H"
 
         # Inicialización desde igualación
         self.Hotels.id = "13-H"

@@ -1,6 +1,7 @@
 from . import Flights
 from . import Hotels
 from . import Cars
+from . import User
 
 class Travels:
 
@@ -24,6 +25,7 @@ class Travels:
 
     def getPrecio(self):
         return self.price
+
     def calcularPrecio(self):
         if self.flights.destination == "":
             self.price = 0
@@ -38,8 +40,8 @@ class Travels:
         if self.hotels.nombre != "":
             print("Hotel: ", self.hotels.nombre)
         if self.cars.marca != "":
-        print("Código del coche: ", self.cars.codi)
-        print("Marca del coche: ", self.cars.marca)
+            print("Código del coche: ", self.cars.codi)
+            print("Marca del coche: ", self.cars.marca)
 
         print("S/N: ")
         res = input()
