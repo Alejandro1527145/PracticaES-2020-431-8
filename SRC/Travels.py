@@ -41,7 +41,7 @@ class Travels:
         print("Código del coche: ", self.cars.codi)
         print("Marca del coche: ", self.cars.marca)
 
-        print("S/N:")
+        print("S/N: ")
         res = input()
         if res == "Si" or "S" or "Sí" or "s" or "si" or "sí":
             self.user.Travels = self

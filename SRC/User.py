@@ -5,7 +5,6 @@ class User:
     def __init__(self):
         pass
 
-
     def __init__(self, name, DNI, telf, email, payment_data: PaymentData):
         self.name = name
         self.DNI = DNI
